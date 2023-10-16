@@ -1,0 +1,37 @@
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+            System.out.print("Enter your Name: ");
+                String fname = scanner.nextLine();
+            System.out.println("-------------------");
+            System.out.println("Quiz is 30% of your Grade");
+            System.out.print("Enter Quiz 1: ");
+                Double qz1 = scanner.nextDouble();
+            System.out.print("Enter Quiz 2: ");
+                Double qz2 = scanner.nextDouble();
+            System.out.print("Enter Quiz 3: ");
+                Double qz3 = scanner.nextDouble();
+            Double totalpqz = (qz1 + qz2 + qz3) / 3;   
+            System.out.println("Total Prelim Quiz: " + totalpqz);
+            System.out.println("-------------------");
+            System.out.println("Class Standing is 35% of your Grade");
+            System.out.print("Attendance: ");
+                Double attend = scanner.nextDouble();
+            System.out.print("Recitation: ");
+                Double recit = scanner.nextDouble();
+            System.out.print("Seatwork: ");
+                Double st_wk = scanner.nextDouble(); 
+            System.out.print("Assignment: ");
+                Double assign = scanner.nextDouble();  
+            Double totalpclass = (attend + recit + st_wk + assign) / 4;
+            System.out.println("Total Prelin Class: " + totalpclass);
+            System.out.println("-------------------");
+            System.out.println("Prelim Exam is 35% of your Grade");
+            System.out.print("Enter your Prelim Exam: ");
+                Double pexam = scanner.nextDouble();
+            System.out.println("-------------------");
+            Double pgrade = (totalpqz*.30) + (totalpclass*.35) + (pexam*.35);
+            System.out.println("Congrats! " + fname + " your Prelim Grade is " + pgrade);
+    }
+}
